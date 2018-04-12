@@ -9,7 +9,9 @@
 <html>
 <head>
   <meta charset="UTF-8">
-
+  <title>
+    Github Visualization
+  </title>
 <script src="lib/jquery/jquery-3.2.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
@@ -22,17 +24,13 @@
 <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
 <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
 
-<link href="css/bootstrap.min.css.map">
-<link rel="stylesheet" href="css/bootstrap.min.css" >
+
+  <link href="css/bootstrap.min.css.map">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Github Visualization</h1>
-    <p class="lead">This is a visualization for github with the purpose of better demostration.</p>
-  </div>
-</div>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Github Visualization</a>
@@ -42,88 +40,63 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="partials/time.jsp">Time</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="partials/geometry.jsp">Geometry</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="partials/rank.jsp">Rank</a>
       </li>
     </ul>
   </div>
 </nav>
 
-<div id="container" style="height: 500px; margin-top: 50px"></div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Github Visualization</h1>
+    <p class="lead">
+      This is a visualization for github with the purpose of better demonstration.
+    </p>
+  </div>
+</div>
 
-<script type="text/javascript">
-    var dom = document.getElementById("container");
-    var myChart = echarts.init(dom);
-    var app = {};
-    option = null;
-    var xAxisData = [];
-    var data1 = [];
-    var data2 = [];
-    for (var i = 0; i < 100; i++) {
-        xAxisData.push('类目' + i);
-        data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
-        data2.push((Math.cos(i / 5) * (i / 5 -10) + i / 6) * 5);
-    }
+<div class="container" style="padding: 50px">
+  <%--<h1>View Github Through a New Lens</h1>--%>
+  <p class="head">View Github Through a New Lens. Visualize and interact with the data.</p>
+  <p class="head">Discover dev and orgs behind projects. Filtered by date, city, country, and programming language.</p>
+  <p class="head">Here's the available function:</p>
 
-    option = {
-        title: {
-            text: '柱状图动画延迟'
-        },
-        legend: {
-            data: ['bar', 'bar2'],
-            align: 'left'
-        },
-        toolbox: {
-            // y: 'bottom',
-            feature: {
-                magicType: {
-                    type: ['stack', 'tiled']
-                },
-                dataView: {},
-                saveAsImage: {
-                    pixelRatio: 2
-                }
-            }
-        },
-        tooltip: {},
-        xAxis: {
-            data: xAxisData,
-            silent: false,
-            splitLine: {
-                show: false
-            }
-        },
-        yAxis: {
-        },
-        series: [{
-            name: 'bar',
-            type: 'bar',
-            data: data1,
-            animationDelay: function (idx) {
-                return idx * 10;
-            }
-        }, {
-            name: 'bar2',
-            type: 'bar',
-            data: data2,
-            animationDelay: function (idx) {
-                return idx * 10 + 100;
-            }
-        }],
-        animationEasing: 'elasticOut',
-        animationDelayUpdate: function (idx) {
-            return idx * 5;
-        }
-    };;
-    if (option && typeof option === "object") {
-        myChart.setOption(option, true);
-    }
-</script>
+  <div class="container" style="margin-top: 50px">
+    <div class="row head">
+      <div class="col-sm">
+        <a href="partials/time.jsp">Filtered by date</a>
+      </div>
+      <div class="col-sm">
+        <a href="partials/geometry.jsp">Filtered by region</a>
+      </div>
+      <div class="col-sm">
+        <a href="partials/rank.jsp">Rank</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" align="center" style="padding: 50px">
+    <button type="button" class="btn btn-primary btn-lg" href="#">Repository Visualization</button>
+  </div>
+  <%--  <p class="head" style="margin-top: 50px">
+      <a class="options" href="partials/time.jsp">Filtered by date</a>
+      <a class="options" href="partials/geometry.jsp">Filtered by region</a>
+    </p>--%>
+</div>
+
+<footer class="footer navbar-fixed-bottom ">
+  <p>&copy;Developed by BoldArialBlack.</p>
+</footer>
+
 </body>
 
 </html>
