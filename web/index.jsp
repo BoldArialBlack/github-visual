@@ -12,7 +12,9 @@
   <title>
     Github Visualization
   </title>
+
 <script src="lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
   <link href="css/bootstrap.min.css.map">
@@ -81,6 +83,18 @@
       <a class="options" href="partials/time.jsp">Filtered by date</a>
       <a class="options" href="partials/geometry.jsp">Filtered by region</a>
     </p>--%>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+        Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>
 </div>
 
 <footer class="footer navbar-fixed-bottom ">
