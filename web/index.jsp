@@ -12,21 +12,29 @@
   <title>
     Github Visualization
   </title>
-
 <script src="lib/jquery/jquery-3.2.1.min.js"></script>
-    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
   <link href="css/bootstrap.min.css.map">
   <link rel="stylesheet" href="css/bootstrap.min.css">
 
   <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    #div1{
+      background:-webkit-linear-gradient(
+        top,skyblue,white
+      )
+
+    }
+  </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Github Visualization</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" 
+  data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
@@ -38,17 +46,20 @@
         <a class="nav-link" href="partials/time.jsp">Time</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="partials/geometry.jsp">Geometry</a>
+        <a class="nav-link" href="partials/geometry.jsp">district</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="partials/rank.jsp">Rank</a>
+        <a class="nav-link" href="partials/rank.jsp">Language Rank</a>
+      <li class="nav-item">
+        <a class="nav-link" href="partials/rank.jsp">Language Trend</a>
+      </li>
       </li>
     </ul>
   </div>
 </nav>
 
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
+<div class="jumbotron jumbotron-fluid" id="div1">
+  <div class="container" >
     <h1 class="display-4">Github Visualization</h1>
     <p class="lead">
       This is a visualization for github with the purpose of better demonstration.
@@ -83,18 +94,6 @@
       <a class="options" href="partials/time.jsp">Filtered by date</a>
       <a class="options" href="partials/geometry.jsp">Filtered by region</a>
     </p>--%>
-</div>
-
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-        Dropdown button
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-    </div>
 </div>
 
 <footer class="footer navbar-fixed-bottom ">

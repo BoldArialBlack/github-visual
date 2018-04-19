@@ -13,6 +13,7 @@
         Github Visualization - Filtered by region
     </title>
     <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
     <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
@@ -25,39 +26,91 @@
     <script type="text/javascript"
             src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
     <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
-
+    
     <link href="../css/bootstrap.min.css.map">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="../index.jsp">Github Visualization</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="../index.jsp">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="time.jsp">Time</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Geometry</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="rank.jsp">Rank</a>
-            </li>
-        </ul>
-    </div>
-</nav>
 
-<div id="container" style="height: 500px; margin-top: 50px"></div>
+<style>
+    #div1{
+        background:-webkit-linear-gradient(top,greenyellow,white)
+    }
+
+    li:hover{
+        background: blue;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Github Visualization</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">IT IS A SPAN</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="../index.jsp">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="time.jsp">Time</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="geometry.jsp">district</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rank.jsp">Language Rank</a>
+            <li class="nav-item">
+              <a class="nav-link" href="trend.jsp">Language Trend</a>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="jumbotron jumbotron-fluid" id="div1">
+        <div class="container" >
+          <h1 class="display-4">查看地域分布</h1>
+          <p class="lead">
+            在这里，我们根据Github上用户登记的个人地址，为你展示了语言排行中几种较为热门的语言
+            在不同地区的使用占比情况<br/>
+            您可以分别在世界地图和中国地图范围内查看您想查看的语言。
+          </p>
+        </div>
+      </div>
+
+    <div class="container" style="padding:50px">
+    
+        <div class="container" style="padding:50px">
+            您当前查看的的语言为:
+            <select>
+                <option>Java</option>
+                <option>C/C++</option>
+                <option>Python</option>
+                <option>JavaScript</option>
+                <option>Objective-C</option>
+            </select>
+        </div>
+    
+      <div class="btn-group " data-toggle="buttons" align="center">
+        <label class="btn btn-primary btn-lg ">
+            <input type="radio" name="map" id="map1">查看世界地图
+        </label>
+    
+        <label class="btn btn-primary btn-lg">
+            <input type="radio" name="map" id="map2">查看中国地图
+        </label>
+      </div>
+    </div>
+
+
+      <div class="container" id="map"></div>
+    
+    
+
 
 <script type="text/javascript">
-    var dom = document.getElementById("container");
+    var dom = document.getElementById("map");
     var myChart = echarts.init(dom);
     var app = {};
     option = null;
@@ -214,6 +267,8 @@
         myChart.setOption(option, true);
     }
 </script>
+
+
 
 </body>
 </html>
