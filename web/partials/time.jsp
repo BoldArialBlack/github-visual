@@ -30,29 +30,32 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="../index.jsp">Github Visualization</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Github Visualization</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">IT IS A SPAN</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="../index.jsp">Home<span class="sr-only">(current)</span></a>
+            </li>
             <li class="nav-item active">
-                <a class="nav-link" href="../index.jsp">Home<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="time.jsp">Time</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#">Time</a>
+              <a class="nav-link" href="geometry.jsp">district</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="geometry.jsp">Geometry</a>
+              <a class="nav-link" href="rank.jsp">Language Rank</a>
+              </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="trend.jsp">Language Trend</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="rank.jsp">Rank</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+          </ul>
+        </div>
+      </nav>
 
 <div id="container" style="height: 500px; margin-top: 50px"></div>
 

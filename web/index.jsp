@@ -51,7 +51,7 @@
       <li class="nav-item">
         <a class="nav-link" href="partials/rank.jsp">Language Rank</a>
       <li class="nav-item">
-        <a class="nav-link" href="partials/rank.jsp">Language Trend</a>
+        <a class="nav-link" href="partials/trend.jsp">Language Trend</a>
       </li>
       </li>
     </ul>
