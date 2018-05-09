@@ -43,15 +43,15 @@
         <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="partials/time.jsp">Time</a>
+        <a class="nav-link" href="impls/time.jsp">Time</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="partials/geometry.jsp">district</a>
+        <a class="nav-link" href="impls/geometry.jsp">district</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="partials/rank.jsp">Language Rank</a>
+        <a class="nav-link" href="impls/rank.jsp">Language Rank</a>
       <li class="nav-item">
-        <a class="nav-link" href="partials/trend.jsp">Language Trend</a>
+        <a class="nav-link" href="impls/trend.jsp">Language Trend</a>
       </li>
       </li>
     </ul>
@@ -76,13 +76,13 @@
   <div class="container" style="margin-top: 50px">
     <div class="row head">
       <div class="col-sm">
-        <a href="partials/time.jsp">Filtered by date</a>
+        <a href="impls/time.jsp">Filtered by date</a>
       </div>
       <div class="col-sm">
-        <a href="partials/geometry.jsp">Filtered by region</a>
+        <a href="impls/geometry.jsp">Filtered by region</a>
       </div>
       <div class="col-sm">
-        <a href="partials/rank.jsp">Rank</a>
+        <a href="impls/rank.jsp">Rank</a>
       </div>
     </div>
   </div>
